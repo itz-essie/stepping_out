@@ -24,6 +24,8 @@
     "express-handlebars": "^5.2.1",
     "handlebars-helper-css": "^0.1.0",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.7"
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.5.0"
   }
 }
