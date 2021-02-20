@@ -16,10 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     activity_category: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 260],
-      },
+        default: 'Entertainment'
     },
     activity_name: {
       type: DataTypes.STRING,
