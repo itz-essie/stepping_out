@@ -1,13 +1,100 @@
 <div class="jumbotron">
     <div class=""><img src="" alt="">
         <h2>Stepping Out!</h2>
+        <h5>Please contribute by recommending COVID-friendly date spots in your area, below:</h5>
         <div class="mt-4">
-            <form class="create-form">
+            <form id="cms">
                 <div class="form-group">
-                    <div class="input-group mb-3">
-                        <input type="text" id="br" name="" class="form-control" placeholder="" aria-label=""
-                            aria-describedby="button-addon2">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="author_name" placeholder="Enter your name here">
+                    <br />
+                    <label for="name">Email:</label>
+                    <input type="text" class="form-control" id="author_email" placeholder="Enter your email here">
+                    <br />
+                    <div class="form-group">
+                        <label for="category">Select Category:</label>
+                        <select class="custom-select" id="activity_category">
+                            <option value="Personal">Food & Drink</option>
+                            <option value="Product Review">Sports</option>
+                            <option value="Political">Virtual</option>
+                            <option value="Political">Entertainment</option>
+                            <option value="Political">Outdoors & Recreation</option>
+                        </select>
                     </div>
+                    <br />
+                    <label for="activity_name">Activity Name:</label>
+                    <input type="text" class="form-control" id="activity_name" placeholder="Enter activity name here">
+                    <br />
+                    <label for="activity_description">Activity Description:</label>
+                    <textarea class="form-control" rows="10" id="activity_description"
+                        placeholder="Enter activity description here"></textarea>
+                    <br />
+                    <label for="activity_name">Rating:</label>
+                    <input type="text" class="form-control" id="rating" placeholder="Enter rating here">
+                    <br />
+                    <label for="activity_name">Cost:</label>
+                    <input type="text" class="form-control" id="cost" placeholder="Enter estimated cost here">
+                    <br />
+                    <label for="activity_name">City:</label>
+                    <input type="text" class="form-control" id="city" placeholder="Enter city here">
+                    <br />
+                    <div class="form-group">
+                        <label for="category">Select State:</label>
+                        <select class="custom-select" id="state">
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusets">Massachusets</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-success submit btn-lg">Submit</button>
                 </div>
             </form>
         </div>
