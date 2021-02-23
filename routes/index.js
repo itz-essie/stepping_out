@@ -23,7 +23,17 @@ router.post("/api/signup", (req, res) => {
 })
 
 router.post("/newEvent", (req, res) =>{
-    db.Posts.create(req.body)
+    db.Posts.create(req.body{
+        author_name: req.body.author_name,
+        author_email: req.body.author_email,
+        activity_category: req.body.activity_category,
+        activity_name: req.body.activity_name,
+        activity_description: req.body.activity_description,
+        rating: req.body.rating,
+        cost: req.body.cost,
+        city: req.body.city,
+        state_code: req.body.state_code
+    })
     .then(posts => {
         res.sendStatus(201)
     })
