@@ -2,7 +2,7 @@ const router = require("express").Router()
 const db = require("../models")
 
 router.get("/", (req, res) => {
-    res.render("index")
+    res.render("index",{greeting: "Hello World- testing this out"})
 })
 
 router.get("/foodrink", (req, res) => {
@@ -20,6 +20,16 @@ router.post("/api/signup", (req, res) => {
         .catch(() => {
             res.redirect("/signup")
         })
+})
+
+router.post("/newEvent", (req, res) =>{
+    db.Posts.create(req.body)
+    .then(posts => {
+        res.sendStatus(201)
+    })
+    .catch((error) => {
+        res.send(error)
+    })
 })
 
 module.exports = router;

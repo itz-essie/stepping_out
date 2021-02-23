@@ -54,7 +54,7 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     state_code: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 2],
