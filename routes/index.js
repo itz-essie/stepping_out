@@ -1,8 +1,12 @@
 const router = require("express").Router()
 const db = require("../models")
+const express = require('express');
+const formidable = require('formidable');
+ 
+const app = express();
 
 router.get("/", (req, res) => {
-    res.render("index",{greeting: "Hello World- testing this out"})
+    res.render("index")
 })
 
 router.get("/foodrink", (req, res) => {
@@ -40,6 +44,28 @@ router.post("/newEvent", (req, res) =>{
     .catch((error) => {
         res.send(error)
     })
+})
+
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/jumbo.handlebars');
+  });
+   
+  app.post('/', (req, res) => { 
+    var form = new formidable.IncomingForm();
+   
+    form.parse(req)
+
+    form.on('fileBegin', function (name, file) {
+        file.path= __dirname + '/uploads/' + file.name
+    })
+
+    form.on('file', function(name, file) {
+        console.log("Uploaded file" + file.name)
+    })
+
+    res.sendFile(__dirname + '/jumbo.handlebars')
+
 })
 
 module.exports = router;
