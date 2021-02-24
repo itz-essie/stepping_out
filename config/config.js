@@ -10,16 +10,13 @@ module.exports=
   },
   "test": {
     "username": "root",
-    "password": process.env.DB_PASS,
+    "password": null,
     "database": "date_ideas",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": process.env.DB_PASS,
-    "database": "date_ideas",
-    "host": "127.0.0.1",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
