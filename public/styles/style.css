@@ -58,3 +58,65 @@ body {
     }
 }
 
+.submission-form-container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (min-width: 576px) { 
+    .submission-form-container {
+        width: 50%;
+    }
+}
+@media (min-width: 768px) {}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+@media (min-width: 1400px) {}
+
+.dining-title {
+    font-family: Goudy Old Style;
+}
+
+.entertainment-title {
+    font-family: Brush Script MT
+}
+
+.sports-title {
+    font-family: Lucida Console;
+}
+
+.virtual-title {
+    font-family: Lucida Grande;
+}
+
+.outdoors-title {
+    font-family: Rockwell Extra Bold;
+}
+
+.state-filter {
+    margin: 0
+}
+
+.category-img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.page-row {
+    margin-bottom: 100px;
+}
+
+.activity-section {
+    margin-top: 50px;
+}
+
+.card-bg {
+    box-shadow: 15px 10px 10px black;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(116,116,116,1) 100%);
+}
