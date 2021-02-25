@@ -6,7 +6,7 @@ body {
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 100%, rgba(121,118,9,1) 0%);	    background: linear-gradient(180deg, rgba(14,0,255,1) 0%, rgba(109,230,255,1) 0%, rgba(255,255,255,1) 100%);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 150vh;
 }	
 
 .logo {
@@ -61,6 +61,10 @@ body {
 .submission-form-container {
     margin: 0 auto;
     width: 100%;
+}
+
+.jumbo-bg {
+    height: 100vh;
 }
 
 @media (min-width: 576px) { 
