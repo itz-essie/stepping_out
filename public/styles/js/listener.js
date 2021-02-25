@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const costInput = document.getElementById("cost");
   const cityInput = document.getElementById("city");
   const stateInput = document.getElementById("state");
+  const insiderInfoInput = document.getElementById("inputInsider");
+  const photosInput = document.getElementById("inputPhotos");
 
 
   // Event listener for when the date idea is submitted
@@ -27,7 +29,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
       rating: ratingInput.value.trim(),
       cost: costInput.value.trim(),
       city: cityInput.value.trim(),
-      state_code: stateInput.value
+      state_code: stateInput.value,
+      inputInsider: insiderInfoInput.value,
+      inputPhotos: photosInput.value
     };
     submitPost(newPost);
   };
