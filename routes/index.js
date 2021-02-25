@@ -12,18 +12,17 @@ router.get("/", (req, res) => {
 router.get("/foodrink", (req, res) => {
     res.render("FoodDrink")
 })
-router.get("/sports", (req, res) => {
-    res.render("Sports")
-})
-router.get("/virtual", (req, res) => {
-    res.render("Virtual")
-})
-router.get("/entertainment", (req, res) => {
-    res.render("Entertainment")
-})
-router.get("/outdoorrecreation", (req, res) => {
-    res.render("OutdoorRecreation")
-})
+
+router.get("/entertainment", (req, res) => res.render("entertainment"))
+
+router.get("/sports", (req, res) => res.render("sports"))
+
+router.get("/virtual", (req, res) => res.render("virtual"))
+
+router.get("/outdoors", (req, res) => res.render("outdoors"))
+
+router.get("/submission", (req, res) => res.render("submission"))
+
 router.get("/signup", (req, res) => {
     res.render("signup")
 })
