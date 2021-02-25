@@ -13,6 +13,16 @@ router.get("/foodrink", (req, res) => {
     res.render("FoodDrink")
 })
 
+router.get("/entertainment", (req, res) => res.render("entertainment"))
+
+router.get("/sports", (req, res) => res.render("sports"))
+
+router.get("/virtual", (req, res) => res.render("virtual"))
+
+router.get("/outdoors", (req, res) => res.render("outdoors"))
+
+router.get("/submission", (req, res) => res.render("submission"))
+
 router.get("/signup", (req, res) => {
     res.render("signup")
 })
