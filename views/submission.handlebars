@@ -4,21 +4,38 @@
         <form>
             <div class="form-group">
                 <label for="inputName">Name</label>
-                <input type="text" class="form-control" id="inputName" placeholder="enter your name">
+                <input type="text" class="form-control" id="author_name" placeholder="enter your name">
             </div>
             <div class="form-group">
                 <label for="inputEmail1">Email address</label>
-                <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <input type="email" class="form-control" id="author_email" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
             </div>
-            {{>components/InputState}}
+            {{>components/inputstate}}
             <div class="form-group">
                 <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity" placeholder="Enter city">
+                <input type="text" class="form-control" id="city" placeholder="Enter city">
+            </div>
+            <div class="form-group">
+                <label for="category">Select Category:</label>
+                <select class="custom-select" id="activity_category">
+                    <option value="Personal">Food & Drink</option>
+                    <option value="Product Review">Sports</option>
+                    <option value="Virtual">Virtual</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Outdoors & Recreation">Outdoors & Recreation</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="inputDateName">Date name</label>
-                <input type="text" class="form-control" id="inputDateName" placeholder="Enter date name">
+                <input type="text" class="form-control" id="state" placeholder="Enter date name">
+            </div>
+            <div class="form-group">
+                <label for="inputDateDescription">Date description</label>
+                <textarea class="form-control" rows="10" id="activity_description"
+                        placeholder="Enter date/activity description here"></textarea>
             </div>
             <div class="form-group">
                 <label for="inputPhotos">Photos</label>
@@ -26,11 +43,11 @@
             </div>
             <div class="form-group">
                 <label for="inputRating">Rating</label>
-                <input type="text" class="form-control" id="inputRating" placeholder="Enter rating">
+                <input type="text" class="form-control" id="rating" placeholder="Enter rating">
             </div>
             <div class="form-group">
                 <label for="inputCost">Cost</label>
-                <input type="text" class="form-control" id="inputCost" placeholder="Enter cost">
+                <input type="text" class="form-control" id="cost" placeholder="Enter cost">
             </div>
             <div class="form-group">
                 <label for="inputInsider">Stepping Out insider info</label>
@@ -39,4 +56,4 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-</div> 
+</div>
