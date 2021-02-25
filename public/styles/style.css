@@ -14,3 +14,47 @@ body {
     height: 300px;	   
 } 	
 
+.home-separator-first {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.home-separator-second {
+    padding-left: 45%;
+    padding-right: 45%;
+}
+
+.home-hr {
+    border-top: black 5px dotted;
+}
+
+.home-about-team {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white
+}
+
+.sun-img {
+    height: 200px;
+    width: 200px;
+    animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
