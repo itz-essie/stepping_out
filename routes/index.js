@@ -12,7 +12,18 @@ router.get("/", (req, res) => {
 router.get("/foodrink", (req, res) => {
     res.render("FoodDrink")
 })
-
+router.get("/sports", (req, res) => {
+    res.render("Sports")
+})
+router.get("/virtual", (req, res) => {
+    res.render("Virtual")
+})
+router.get("/entertainment", (req, res) => {
+    res.render("Entertainment")
+})
+router.get("/outdoorrecreation", (req, res) => {
+    res.render("OutdoorRecreation")
+})
 router.get("/signup", (req, res) => {
     res.render("signup")
 })
