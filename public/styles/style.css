@@ -2,8 +2,14 @@ body {
     padding-bottom: 100px;
 }
 
+h2 {
+    color:teal;
+    font-family: 'Lobster', cursive;
+}
+
 .jumbo-bg {
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 100%, rgba(121,118,9,1) 0%);	    background: linear-gradient(180deg, rgba(14,0,255,1) 0%, rgba(109,230,255,1) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 100%, rgba(121,118,9,1) 0%);
+    background: rgb(238, 227, 211);
     background-repeat: no-repeat;
     background-size: cover;
     height: 150vh;
@@ -31,6 +37,7 @@ body {
 .home-about-team {
     margin-top: 100px;
     margin-bottom: 50px;
+    font-size: small;
 }
 
 .footer {
@@ -39,14 +46,14 @@ body {
     bottom: 0;
     width: 100%;
     text-align: center;
-    background-color: black;
-    color: white
+    background-color: rgb(252, 252, 252);
+    color: rgb(250, 82, 3)
 }
 
 .sun-img {
-    height: 200px;
-    width: 200px;
-    animation: rotation 10s infinite linear;
+    height: 100px;
+    width: 100px;
+    animation: rotation 20s infinite linear;
 }
 
 @keyframes rotation {
@@ -78,23 +85,28 @@ body {
 @media (min-width: 1400px) {}
 
 .dining-title {
-    font-family: Goudy Old Style;
+    font-family: 'Lobster', cursive;
+    size: 50px;
 }
 
 .entertainment-title {
-    font-family: Brush Script MT
+    font-family: 'Lobster', cursive;
+    size: 50px;
 }
 
 .sports-title {
-    font-family: Lucida Console;
+    font-family: 'Lobster', cursive;
+    size: 50px;
 }
 
 .virtual-title {
-    font-family: Lucida Grande;
+    font-family: 'Lobster', cursive;
+    size: 50px;
 }
 
 .outdoors-title {
-    font-family: Rockwell Extra Bold;
+    font-family: 'Lobster', cursive;
+    size: 50px;
 }
 
 .state-filter {
@@ -102,8 +114,8 @@ body {
 }
 
 .category-img {
-    width: 250px;
-    height: 250px;
+    width: 50px;
+    height: 50px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -119,18 +131,40 @@ body {
 }
 
 .card-bg {
-    box-shadow: 15px 10px 10px black;
+    box-shadow: 15px 10px 10px rgb(233, 228, 217);
     padding: 10px;
     border-radius: 10px;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(116,116,116,1) 100%);
+    background:rgb(224, 180, 85);
     transition: 0.5s;
 }
 
 .card-bg:hover {
-    box-shadow: 20px 20px 20px black;;
+    box-shadow: 20px 20px 20px rgb(223, 198, 131);;
 }
 
 .icon {
     margin: 0 auto;
 }	
 
+h1 {
+    color:rgb(209, 70, 15);
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+}
+
+h4 {
+    color:rgb(224, 180, 85);
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.nav-item {
+    font-family: 'Montserrat', sans-serif;
+
+
+}
