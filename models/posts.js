@@ -55,6 +55,16 @@ module.exports = (sequelize, DataTypes) => {
     state_code: {
       type: DataTypes.STRING,
     },
+    inputPhotos: {
+      type: DataTypes.BLOB,
+    },
+    inputInsider: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        len: [1, 400],
+      },
+    },
   });
   return Posts;
 };
