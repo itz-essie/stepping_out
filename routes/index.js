@@ -15,6 +15,13 @@ router.get("/foodrink", (req, res) => {
 
 router.get("/entertainment", (req, res) => res.render("entertainment"))
 
+router.get("/api/posts", (req, res) => {
+    db.Posts.findAll().then( dbdump => {
+        res.json(dbdump);
+    })
+})
+
+
 router.get("/sports", (req, res) => res.render("sports"))
 
 router.get("/virtual", (req, res) => res.render("virtual"))
@@ -37,6 +44,7 @@ router.post("/api/signup", (req, res) => {
 })
 
 router.post("/newEvent", (req, res) =>{
+    console.log(req.body)
     db.Posts.create({
         author_name: req.body.author_name,
         author_email: req.body.author_email,
