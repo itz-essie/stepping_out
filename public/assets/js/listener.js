@@ -2,22 +2,23 @@
 document.addEventListener("DOMContentLoaded", (e) => {
   console.log("DOM loaded! 🚀");
 
-  const submitButton = document.getElementById("submit_button");
+  const formElement = document.getElementById("submitPostForm");
   const authorNameInput = document.getElementById("author_name");
   const authorEmailInput = document.getElementById("author_email");
+  const cityInput = document.getElementById("city");
   const activityCategoryInput = document.getElementById("activity_category");
-  const activityNameInput = document.getElementById("activity_name");
+  const stateInput = document.getElementById("inputState");
   const activityDescriptionInput = document.getElementById("activity_description");
+  const photosInput = document.getElementById("inputPhotos");
   const ratingInput = document.getElementById("rating");
   const costInput = document.getElementById("cost");
-  const cityInput = document.getElementById("city");
-  const stateInput = document.getElementById("state");
   const insiderInfoInput = document.getElementById("inputInsider");
-  const photosInput = document.getElementById("inputPhotos");
+  const activityNameInput = document.getElementById("activity_name");
+  
 
 
   // Event listener for when the date idea is submitted
-  submitButton.addEventListener("submit", handleFormSubmit);
+  
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const newPost = {
@@ -33,8 +34,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
       inputInsider: insiderInfoInput.value,
       inputPhotos: photosInput.value
     };
+    console.log("submitting post", newPost);
     submitPost(newPost);
   };
+  formElement.addEventListener("submit", handleFormSubmit);
 
   // Event handler for when a user submits a post
   const submitPost = (post) => {
