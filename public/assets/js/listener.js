@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const costInput = document.getElementById("cost");
   const insiderInfoInput = document.getElementById("inputInsider");
   const activityNameInput = document.getElementById("activity_name");
+  const uploadInput = document.getElementById("inputGroupFile01");
   
 
 
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    console.log(uploadInput.files[0]);
     const newPost = {
       author_name: authorNameInput.value.trim(),
       author_email: authorEmailInput.value.trim(),
@@ -35,7 +37,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       inputPhotos: photosInput.value
     };
     console.log("submitting post", newPost);
-    submitPost(newPost);
+    // submitPost(newPost);
   };
   formElement.addEventListener("submit", handleFormSubmit);
 
@@ -53,4 +55,5 @@ document.addEventListener("DOMContentLoaded", (e) => {
         console.error("Error:", error);
       });
   };
+  
 });
