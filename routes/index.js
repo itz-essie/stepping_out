@@ -14,10 +14,6 @@ router.get("/", (req, res) => {
     res.render("index")
 })
 
-router.get("/foodrink", (req, res) => {
-    res.render("FoodDrink")
-})
-
 router.get("/entertainment", (req, res) => res.render("entertainment"))
 
 router.get("/sports", (req, res) => {
@@ -46,7 +42,11 @@ router.get("/foodrink", (req, res) => {
             }
         },
         raw : true
-    }).then(posts => res.render("FoodDrink", { posts: postsWithNextRowCheck(posts) }))
+    }).then(posts => {
+        console.log("Posts returned in /foodrink:", posts)
+
+        res.render("FoodDrink", { posts: postsWithNextRowCheck(posts) })
+})
     .catch(() => res.redirect("/"))
 })
 
