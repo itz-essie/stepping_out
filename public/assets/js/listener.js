@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       input_photos: uploadInput.value
     };
     console.log("submitting post", newPost);
-    // submitPost(newPost);
+    submitPost(newPost);
   };
   formElement.addEventListener("submit", handleFormSubmit);
 
