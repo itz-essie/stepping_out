@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     "Sports": "/sports",
     "Virtual": "/virtual",
     "Entertainment": "/entertainment",
-    "Outdoors_Recreation": "outdoors"
+    "Outdoors_Recreation": "/outdoors"
   }
   
 
@@ -56,8 +56,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
       },
       body: JSON.stringify(post),
     })
-      .then((response) => response.json())
-      .then(({ activity_category }) => window.location.href = REDIRECT_MAP[activity_category])
+      .then((data) => {
+       window.location.href = REDIRECT_MAP[post.activity_category]
+      })
       .catch((error) => {
         console.error("Error:", error);
       });
