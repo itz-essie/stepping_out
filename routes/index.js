@@ -2,8 +2,13 @@ const router = require("express").Router()
 const db = require("../models")
 const express = require('express');
 const formidable = require('formidable');
- 
 const app = express();
+const { Op } = require("sequelize");
+
+const postsWithNextRowCheck = posts => posts.map((post, index) => {
+    post["next_row"] = (index % 2 === 0)
+    return post
+})
 
 router.get("/", (req, res) => {
     res.render("index")
@@ -34,12 +39,16 @@ router.get("/api/posts", (req, res) => {
 })
 
 router.get("/foodrink", (req, res) => {
-    db.post.findAll({
+    db.Posts.findAll({
         where: {
-            activity_category: "Food & Drink",
+            activity_category: {
+                [Op.eq]: 'Food_Drink'
+            }
         },
-    }).then((dbPost) => res.json(dbPost));
- });
+        raw : true
+    }).then(posts => res.render("FoodDrink", { posts: postsWithNextRowCheck(posts) }))
+    .catch(() => res.redirect("/"))
+})
 
 router.get("/sports", (req, res) => {
    db.post.findAll({
