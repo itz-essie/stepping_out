@@ -15,18 +15,63 @@ router.get("/foodrink", (req, res) => {
 
 router.get("/entertainment", (req, res) => res.render("entertainment"))
 
+router.get("/sports", (req, res) => {
+    res.render("sports")
+})
+
+router.get("/outdoors", (req, res) => {
+    res.render("outdoors")
+})
+
+router.get("/virtual", (req, res) => {
+    res.render("virtual")
+})
+
 router.get("/api/posts", (req, res) => {
     db.Posts.findAll().then( dbdump => {
         res.json(dbdump);
     })
 })
 
+router.get("/foodrink", (req, res) => {
+    db.post.findAll({
+        where: {
+            activity_category: "Food & Drink",
+        },
+    }).then((dbPost) => res.json(dbPost));
+ });
 
-router.get("/sports", (req, res) => res.render("sports"))
+router.get("/sports", (req, res) => {
+   db.post.findAll({
+       where: {
+           activity_category: "Sports",
+       },
+   }).then((dbPost) => res.json(dbPost));
+});
 
-router.get("/virtual", (req, res) => res.render("virtual"))
+router.get("/virtual", (req, res) => {
+    db.post.findAll({
+        where: {
+            activity_category: "Virtual",
+        },
+    }).then((dbPost) => res.json(dbPost));
+ });
 
-router.get("/outdoors", (req, res) => res.render("outdoors"))
+ router.get("/entertainment", (req, res) => {
+    db.post.findAll({
+        where: {
+            activity_category: "Entertainment",
+        },
+    }).then((dbPost) => res.json(dbPost));
+ });
+
+router.get("/outdoors", (req, res) => {
+    db.post.findAll({
+        where: {
+            activity_category: "Outdoors & Recreation",
+        },
+    }).then((dbPost) => res.json(dbPost));
+ });
 
 router.get("/submission", (req, res) => res.render("submission"))
 
