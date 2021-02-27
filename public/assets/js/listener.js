@@ -14,6 +14,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const costInput = document.getElementById("cost");
   const insiderInfoInput = document.getElementById("inputInsider");
   const activityNameInput = document.getElementById("activity_name");
+
+  const REDIRECT_MAP = {
+    "Food_Drink": "/foodrink",
+    "Sports": "/sports",
+    "Virtual": "/virtual",
+    "Entertainment": "/entertainment",
+    "Outdoors_Recreation": "outdoors"
+  }
   
 
 
@@ -48,7 +56,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
       },
       body: JSON.stringify(post),
     })
-      .then((response) => console.log(response))
+      .then((response) => response.json())
+      .then(({ activity_category }) => window.location.href = REDIRECT_MAP[activity_category])
       .catch((error) => {
         console.error("Error:", error);
       });
