@@ -57,10 +57,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
       body: JSON.stringify(post),
     })
       .then((data) => {
-       window.location.href = REDIRECT_MAP[post.activity_category]
+      // window.location.href = REDIRECT_MAP[post.activity_category]
       })
       .catch((error) => {
         console.error("Error:", error);
       });
   };
+
+  console.log(Posts)
 });
