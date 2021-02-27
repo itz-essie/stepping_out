@@ -119,25 +119,42 @@ router.post("/newEvent", (req, res) =>{
 })
 
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/jumbo.handlebars');
-  });
+// app.get('/', (req, res) => {
+//     res.sendFile(__dirname + '/jumbo.handlebars');
+//   });
    
-  app.post('/', (req, res) => { 
-    var form = new formidable.IncomingForm();
+//   app.post('/', (req, res) => { 
+//     var form = new formidable.IncomingForm();
    
-    form.parse(req)
+//     form.parse(req)
 
-    form.on('fileBegin', function (name, file) {
-        file.path= __dirname + '/uploads/' + file.name
-    })
+//     form.on('fileBegin', function (name, file) {
+//         file.path= __dirname + '/uploads/' + file.name
+//     })
 
-    form.on('file', function(name, file) {
-        console.log("Uploaded file" + file.name)
-    })
+//     form.on('file', function(name, file) {
+//         console.log("Uploaded file" + file.name)
+//     })
 
-    res.sendFile(__dirname + '/jumbo.handlebars')
+//     res.sendFile(__dirname + '/jumbo.handlebars')
 
-})
+// })
+
+// app.post('/api/upload', (req, res, next) => { 
+    
+//     const form = new formidable.IncomingForm(); 
+//     form.parse(req, function(err, fields, files){ 
+  
+//         var oldPath = files.profilePic.path; 
+//         var newPath = path.join(__dirname, 'uploads') 
+//                 + '/'+files.profilePic.name 
+//         var rawData = fs.readFileSync(oldPath) 
+      
+//         fs.writeFile(newPath, rawData, function(err){ 
+//             if(err) console.log(err) 
+//             return res.send("Successfully uploaded") 
+//         }) 
+//   }) 
+// }); 
 
 module.exports = router;
