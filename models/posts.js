@@ -55,10 +55,11 @@ module.exports = (sequelize, DataTypes) => {
     state_code: {
       type: DataTypes.STRING,
     },
-    inputPhotos: {
+    input_photos: {
       type: DataTypes.BLOB,
+      allowNull: true,
     },
-    inputInsider: {
+    input_insider: {
       type: DataTypes.STRING,
       allowNull: true,
       validate: {
