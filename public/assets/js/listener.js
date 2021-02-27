@@ -9,15 +9,20 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const activityCategoryInput = document.getElementById("activity_category");
   const stateInput = document.getElementById("inputState");
   const activityDescriptionInput = document.getElementById("activity_description");
-  const photosInput = document.getElementById("inputPhotos");
+  const photosInput = document.getElementById("input_photos");
   const ratingInput = document.getElementById("rating");
   const costInput = document.getElementById("cost");
-  const insiderInfoInput = document.getElementById("inputInsider");
+  const insiderInfoInput = document.getElementById("input_insider");
   const activityNameInput = document.getElementById("activity_name");
   const uploadInput = document.getElementById("inputGroupFile01");
+  const REDIRECT_MAP = {
+    "Food_Drink": "/foodrink",
+    "Sports": "/sports",
+    "Virtual": "/virtual",
+    "Entertainment": "/entertainment",
+    "Outdoors_Recreation": "/outdoors"
+  }
   
-
-
   // Event listener for when the date idea is submitted
   
   const handleFormSubmit = (e) => {
@@ -33,8 +38,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
       cost: costInput.value.trim(),
       city: cityInput.value.trim(),
       state_code: stateInput.value,
-      inputInsider: insiderInfoInput.value,
-      inputPhotos: photosInput.value
+      input_insider: insiderInfoInput.value,
+      input_photos: photosInput.value
     };
     console.log("submitting post", newPost);
     // submitPost(newPost);
@@ -50,7 +55,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
       },
       body: JSON.stringify(post),
     })
-      .then((response) => console.log(response))
+      .then((data) => {
+       window.location.href = REDIRECT_MAP[post.activity_category]
+      })
       .catch((error) => {
         console.error("Error:", error);
       });
