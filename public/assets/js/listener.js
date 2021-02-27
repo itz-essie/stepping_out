@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const activityCategoryInput = document.getElementById("activity_category");
   const stateInput = document.getElementById("inputState");
   const activityDescriptionInput = document.getElementById("activity_description");
-  const photosInput = document.getElementById("input_photos");
   const ratingInput = document.getElementById("rating");
   const costInput = document.getElementById("cost");
   const insiderInfoInput = document.getElementById("input_insider");
@@ -39,10 +38,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
       city: cityInput.value.trim(),
       state_code: stateInput.value,
       input_insider: insiderInfoInput.value,
-      input_photos: photosInput.value
+      input_photos: uploadInput.value
     };
     console.log("submitting post", newPost);
-    // submitPost(newPost);
+    submitPost(newPost);
   };
   formElement.addEventListener("submit", handleFormSubmit);
 

@@ -108,7 +108,9 @@ router.post("/newEvent", (req, res) =>{
         rating: req.body.rating,
         cost: req.body.cost,
         city: req.body.city,
-        state_code: req.body.state_code
+        state_code: req.body.state_code,
+        input_insider: req.body.input_insider,
+        input_photos: req.body.input_photos,
     })
     .then(posts => {
         res.sendStatus(201)

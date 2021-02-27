@@ -1,21 +1,11 @@
-
 <div class="container">
     <script src="/assets/js/listener.js"></script>
     <h2 class="text-center">Submit your date ideas!</h2>
     <div class="submission-form-container">
         <form id="submitPostForm">
-            <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-  </div>
-  <div class="custom-file">
-    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-  </div>
-</div>
             <div class="form-group">
                 <label for="inputName">Name</label>
-                
+
                 <input type="text" class="form-control" id="author_name" placeholder="enter your name">
             </div>
             <div class="form-group">
@@ -47,11 +37,19 @@
             <div class="form-group">
                 <label for="inputDateDescription">Date description</label>
                 <textarea class="form-control" rows="10" id="activity_description"
-                        placeholder="Enter date/activity description here"></textarea>
+                    placeholder="Enter date/activity description here"></textarea>
             </div>
             <div class="form-group">
-                <label for="inputPhotos">Photos</label>
-                <input type="file" class="form-control-file" id="input_photos">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01"
+                            aria-describedby="inputGroupFileAddon01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <label for="inputRating">Rating</label>
