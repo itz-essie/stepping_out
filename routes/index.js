@@ -14,20 +14,6 @@ router.get("/", (req, res) => {
     res.render("index")
 })
 
-router.get("/entertainment", (req, res) => res.render("entertainment"))
-
-router.get("/sports", (req, res) => {
-    res.render("sports")
-})
-
-router.get("/outdoors", (req, res) => {
-    res.render("outdoors")
-})
-
-router.get("/virtual", (req, res) => {
-    res.render("virtual")
-})
-
 router.get("/api/posts", (req, res) => {
     db.Posts.findAll().then( dbdump => {
         res.json(dbdump);
@@ -43,59 +29,68 @@ router.get("/foodrink", (req, res) => {
         },
         raw : true
     }).then(posts => {
-        console.log("Posts returned in /foodrink:", posts)
-
         res.render("FoodDrink", { posts: postsWithNextRowCheck(posts) })
 })
     .catch(() => res.redirect("/"))
 })
 
 router.get("/sports", (req, res) => {
-   db.post.findAll({
-       where: {
-           activity_category: "Sports",
-       },
-   }).then((dbPost) => res.json(dbPost));
-});
+    db.Posts.findAll({
+        where: {
+            activity_category: {
+                [Op.eq]: 'Sports'
+            }
+        },
+        raw : true
+    }).then(posts => {
+        res.render("sports", { posts: postsWithNextRowCheck(posts) })
+})
+    .catch(() => res.redirect("/"))
+})
 
 router.get("/virtual", (req, res) => {
-    db.post.findAll({
+    db.Posts.findAll({
         where: {
-            activity_category: "Virtual",
+            activity_category: {
+                [Op.eq]: 'Virtual'
+            }
         },
-    }).then((dbPost) => res.json(dbPost));
- });
+        raw : true
+    }).then(posts => {
+        res.render("virtual", { posts: postsWithNextRowCheck(posts) })
+})
+    .catch(() => res.redirect("/"))
+})
 
- router.get("/entertainment", (req, res) => {
-    db.post.findAll({
+router.get("/entertainment", (req, res) => {
+    db.Posts.findAll({
         where: {
-            activity_category: "Entertainment",
+            activity_category: {
+                [Op.eq]: 'Entertainment'
+            }
         },
-    }).then((dbPost) => res.json(dbPost));
- });
+        raw : true
+    }).then(posts => {
+        res.render("entertainment", { posts: postsWithNextRowCheck(posts) })
+})
+    .catch(() => res.redirect("/"))
+})
 
 router.get("/outdoors", (req, res) => {
-    db.post.findAll({
+    db.Posts.findAll({
         where: {
-            activity_category: "Outdoors & Recreation",
+            activity_category: {
+                [Op.eq]: 'Outdoors_Recreation'
+            }
         },
-    }).then((dbPost) => res.json(dbPost));
- });
+        raw : true
+    }).then(posts => {
+        res.render("outdoors", { posts: postsWithNextRowCheck(posts) })
+})
+    .catch(() => res.redirect("/"))
+})
 
 router.get("/submission", (req, res) => res.render("submission"))
-
-router.get("/signup", (req, res) => {
-    res.render("signup")
-})
-router.post("/api/signup", (req, res) => {
-    db.Users.create(req.body)
-        .then(user => {
-            res.redirect("/login")
-        })
-        .catch(() => {
-            res.redirect("/signup")
-        })
-})
 
 router.post("/newEvent", (req, res) =>{
     console.log(req.body)
