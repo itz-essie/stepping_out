@@ -1,3 +1,28 @@
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="/">Stepping Out</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarNavDropdown"aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="{{active.foodrink}}">
+                <a class="nav-link {{#if active.foodrink}}active{{/if}}" href="/foodrink">Food/Drink</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{#if active.sports}}active{{/if}}" href="/sports">Sports</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{#if active.virtual}}active{{/if}}" href="/virtual">Virtual</a>
+            </li>
+            <li class="{{active.entertainment}}">
+                <a class="nav-link {{#if active.entertainment}}active{{/if}}" href="/entertainment">Entertainment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{#if active.outdoors}}active{{/if}}" href="/outdoors">Outdoor Recreation </a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div class="container">
     <h1 class="display-4 dining-title">So you want to find some entertainment?</h1>
     <hr>
