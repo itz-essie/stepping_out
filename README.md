@@ -2,13 +2,13 @@
 
 ## Description
 
-This project is a full stack application that allows users to input the names of burgers they'd like to order. Whenever a user submits a burger's name, your app will display the burger on the left side of the page, waiting to be devoured. Each burger in the waiting area also has a Devour it! button. When the user clicks it, the burger will move to the right side of the page, indicating the burger has been devoured. The app will store every burger in a database, whether devoured or not.
+
 
 ## Table of Contents
 
 - [Installation](#installation)
--[User Story](#user-story)
--[Technologies Used](#technologies-used)
+- [User Story](#user-story)
+- [Technologies Used](#technologies-used)
 - [Usage](#usage)
 - [License](#license)
 - [Contributions](#contributions)
@@ -71,7 +71,7 @@ Esiena Ekwofia, Alex Woolley, Domonique Christopher, and Caroline Lynch
 ## Questions
 
 - If you have any questions regarding this repository, contact any of us at: , or you can find more of our work within our github accounts attached below: 
-**[itz-essie](https://github.com/itz-essie)**
-**[awoolley1](https://github.com/awoolley1)**
-**[ShowlandProductions](https://github.com/ShowlandProductions)**
-**[carolineablynch](https://github.com/carolineablynch)**
+- **[itz-essie](https://github.com/itz-essie)**
+- **[awoolley1](https://github.com/awoolley1)**
+- **[ShowlandProductions](https://github.com/ShowlandProductions)**
+- **[carolineablynch](https://github.com/carolineablynch)**
