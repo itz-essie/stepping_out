@@ -1,28 +1,27 @@
 <div class="container">
-    <script src="/assets/js/listener.js"></script>
     <h2 class="text-center">Submit your date ideas!</h2>
     <div class="submission-form-container">
-        <form id="submitPostForm">
+       <form id="submitPostForm" method="POST" action="/api/upload" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="inputName">Name</label>
 
-                <input type="text" class="form-control" id="author_name" placeholder="enter your name">
+                <input type="text" name="author_name" class="form-control" id="author_name" placeholder="enter your name">
             </div>
             <div class="form-group">
                 <label for="inputEmail1">Email address</label>
-                <input type="email" class="form-control" id="author_email" aria-describedby="emailHelp"
+                <input type="email" class="form-control" name="author_email" id="author_email" aria-describedby="emailHelp"
                     placeholder="Enter email">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                     else.</small>
             </div>
-            {{>components/inputstate}}
+            {{>components/submissionstate}} 
             <div class="form-group">
                 <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="city" placeholder="Enter city">
+                <input type="text" name="city" class="form-control" id="city" placeholder="Enter city">
             </div>
             <div class="form-group">
                 <label for="category">Select Category:</label>
-                <select class="custom-select" id="activity_category">
+                <select class="custom-select" id="activity_category" name="activity_category">
                     <option value="Food_Drink">Food & Drink</option>
                     <option value="Sports">Sports</option>
                     <option value="Virtual">Virtual</option>
@@ -32,11 +31,11 @@
             </div>
             <div class="form-group">
                 <label for="inputDateName">Date name</label>
-                <input type="text" class="form-control" id="activity_name" placeholder="Enter date name">
+                <input type="text" class="form-control" id="activity_name" placeholder="Enter date name" name="activity_name">
             </div>
             <div class="form-group">
                 <label for="inputDateDescription">Date description</label>
-                <textarea class="form-control" rows="10" id="activity_description"
+                <textarea class="form-control" rows="10" id="activity_description" name="activity_description"
                     placeholder="Enter date/activity description here"></textarea>
             </div>
             <div class="form-group">
@@ -46,22 +45,22 @@
                     </div>
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" id="inputGroupFile01"
-                            aria-describedby="inputGroupFileAddon01">
+                            aria-describedby="inputGroupFileAddon01" name="profilePic">
                         <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputRating">Rating</label>
-                <input type="text" class="form-control" id="rating" placeholder="Enter rating">
+                <input type="text" class="form-control" id="rating" placeholder="Enter rating" name="rating">
             </div>
             <div class="form-group">
                 <label for="inputCost">Cost</label>
-                <input type="text" class="form-control" id="cost" placeholder="Enter cost">
+                <input type="text" class="form-control" id="cost" placeholder="Enter cost" name="cost">
             </div>
             <div class="form-group">
                 <label for="inputInsider">Stepping Out insider info</label>
-                <input type="text" class="form-control" id="input_insider" placeholder="Enter insider info">
+                <input type="text" class="form-control" id="input_insider" placeholder="Enter insider info" name="input_insider">
             </div>
             <button type="submit" id="submit_button" class="btn btn-primary">Submit</button>
         </form>
