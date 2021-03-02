@@ -3,6 +3,7 @@ let state="";
 const fileUpload = document.getElementById("photoInput");
 const fileName = document.getElementById("currentFileName");
 
+
 // inputState.addEventListener("change", function(event) {
 //     state= event.target.value
 //     // $.ajax({
