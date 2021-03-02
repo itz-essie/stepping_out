@@ -7,11 +7,11 @@ const { Op } = require("sequelize");
 const path = require("path");
 const fs = require("fs");
 const REDIRECT_MAP = {
-  Food_Drink: "foodrink",
-  Sports: "sports",
-  Virtual: "virtual",
-  Entertainment: "entertainment",
-  Outdoors_Recreation: "outdoors",
+  Food_Drink: "/foodrink",
+  Sports: "/sports",
+  Virtual: "/virtual",
+  Entertainment: "/entertainment",
+  Outdoors_Recreation: "/outdoors",
 };
 
 const postsWithNextRowCheck = (posts) =>
