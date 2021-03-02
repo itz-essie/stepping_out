@@ -21,7 +21,7 @@ const postsWithNextRowCheck = (posts) =>
   });
 
 router.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {active: {home: true}});
 });
 
 router.get("/api/posts", (req, res) => {
@@ -40,7 +40,7 @@ router.get("/foodrink", (req, res) => {
     raw: true,
   })
     .then((posts) => {
-      res.render("FoodDrink", { posts: postsWithNextRowCheck(posts) });
+      res.render("FoodDrink", { posts: postsWithNextRowCheck(posts), active:{foodrink:'active'}});
     })
     .catch(() => res.redirect("/"));
 });
@@ -71,7 +71,7 @@ router.get("/sports", (req, res) => {
     raw: true,
   })
     .then((posts) => {
-      res.render("sports", { posts: postsWithNextRowCheck(posts) });
+      res.render("sports", { posts: postsWithNextRowCheck(posts) , active: {sports: 'active'}})
     })
     .catch(() => res.redirect("/"));
 });
@@ -86,7 +86,7 @@ router.get("/virtual", (req, res) => {
     raw: true,
   })
     .then((posts) => {
-      res.render("virtual", { posts: postsWithNextRowCheck(posts) });
+      res.render("virtual", { posts: postsWithNextRowCheck(posts) , active: {virtual: 'active'}})
     })
     .catch(() => res.redirect("/"));
 });
@@ -101,7 +101,7 @@ router.get("/entertainment", (req, res) => {
     raw: true,
   })
     .then((posts) => {
-      res.render("entertainment", { posts: postsWithNextRowCheck(posts) });
+      res.render("entertainment", { posts: postsWithNextRowCheck(posts) , active: {entertainment: 'active'}})
     })
     .catch(() => res.redirect("/"));
 });
@@ -116,7 +116,7 @@ router.get("/outdoors", (req, res) => {
     raw: true,
   })
     .then((posts) => {
-      res.render("outdoors", { posts: postsWithNextRowCheck(posts) });
+      res.render("outdoors", { posts: postsWithNextRowCheck(posts) , active: {outdoors: 'active'}})
     })
     .catch(() => res.redirect("/"));
 });
