@@ -185,7 +185,7 @@ router.post("/api/upload", (req, res, next) => {
           if (err) console.log(err);
           return res.redirect(
             301,
-            `http://localhost:8080/${REDIRECT_MAP[fields.activity_category]}`
+            `${REDIRECT_MAP[fields.activity_category]}`
           );
         });
       })
