@@ -16,11 +16,11 @@ inputState.addEventListener("change", function(event) {
     // })
 })
 
-fileUpload.addEventListener("change", function(){
-    let newFileUploadArr = fileUpload.files;
-    if (newFileUploadArr.length > 0){
-        fileName.innerText = newFileUploadArr[0].name;
-    } else {
-        fileName.innerText = "Choose File";
-    }
-});
+// fileUpload.addEventListener("change", function(){
+//     let newFileUploadArr = fileUpload.files;
+//     if (newFileUploadArr.length > 0){
+//         fileName.innerText = newFileUploadArr[0].name;
+//     } else {
+//         fileName.innerText = "Choose File";
+//     }
+// });
