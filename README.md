@@ -7,8 +7,8 @@ This project is a full stack application that allows users cure their COVID lonl
 ## Table of Contents
 
 - [Installation](#installation)
--[User Story](#user-story)
--[Technologies Used](#technologies-used)
+- [User Story](#user-story)
+- [Technologies Used](#technologies-used)
 - [Usage](#usage)
 - [License](#license)
 - [Contributions](#contributions)
