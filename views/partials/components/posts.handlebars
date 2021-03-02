@@ -3,18 +3,15 @@
         <div class="row page-row">
             <div class="col-sm-6">
                 <div class="card card-bg">
-                    <img class="category-img" src="/images/food.png" alt="Category" />
-
+                    <img class="category-img" src="/assets/images/food.png" alt="Category" />
                     <div class="card-body">
-                       <h5 class="card-title" category={{activity_category}}> Category: {{activity_category}}</h5>
-                  
+                        <h5 class="card-title" category={{activity_category}}> Category: {{activity_category}}</h5>
                         <p class="card-text"> Date Name: {{activity_name}}</p>
                         <p class="card-text"> Location: {{city}}, {{state_code}}</p>
                         <p class="card-text"> Description: {{activity_description}}</p>
                         <p class="card-text"> Rating: {{rating}}</p>
                         <p class="card-text"> Price: ${{cost}}</p>
                         <p class="card-text"> Inside Scoop: {{input_insider}}</p>
-                        <img class="inputPhoto" src={{input_photos}}></img>
                         <button class="btn btn-primary">Show photos</button>
                     </div>
                 </div>
@@ -22,16 +19,15 @@
     {{else}}
             <div class="col-sm-6">
                 <div class="card card-bg">
-                    <img class="category-img" src="/images/food.png" alt="Category" />
+                    <img class="category-img" src="/assets/images/food.png" alt="Category" />
                     <div class="card-body">
-                  <h5 class="card-title" category={{activity_category}}> Category: {{activity_category}}</h5>
+                        <h5 class="card-title" category={{activity_category}}> Category: {{activity_category}}</h5>
                         <p class="card-text"> Date Name: {{activity_name}}</p>
                         <p class="card-text">Location: {{city}}, {{state_code}}</p>
                         <p class="card-text">Description: {{activity_description}}</p>
                         <p class="card-text">Rating: {{rating}}</p>
                         <p class="card-text"> Price: {{cost}}</p>
                         <p class="card-text">Inside Scoop: {{input_insider}}</p>
-                        <img class= "inputPhoto" src={{input_photos}}></img>
                         <button class="btn btn-primary">Show photos</button>
                     </div>
                 </div>

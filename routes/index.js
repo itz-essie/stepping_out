@@ -7,11 +7,11 @@ const { Op } = require("sequelize");
 const path = require("path");
 const fs = require("fs");
 const REDIRECT_MAP = {
-  Food_Drink: "foodrink",
-  Sports: "sports",
-  Virtual: "virtual",
-  Entertainment: "entertainment",
-  Outdoors_Recreation: "outdoors",
+  Food_Drink: "/foodrink",
+  Sports: "/sports",
+  Virtual: "/virtual",
+  Entertainment: "/entertainment",
+  Outdoors_Recreation: "/outdoors",
 };
 
 const postsWithNextRowCheck = (posts) =>
@@ -185,7 +185,7 @@ router.post("/api/upload", (req, res, next) => {
           if (err) console.log(err);
           return res.redirect(
             301,
-            `/${REDIRECT_MAP[fields.activity_category]}`
+            `${REDIRECT_MAP[fields.activity_category]}`
           );
         });
       })
