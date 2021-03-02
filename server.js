@@ -28,24 +28,6 @@ app.set("view engine", "handlebars");
 var routes = require("./routes/index");
 app.use(routes)
 
-app.post('/api/upload', (req, res, next) => { 
-    
-  const form = new formidable.IncomingForm(); 
-  form.parse(req, function(err, fields, files){ 
-
-      var oldPath = files.profilePic.path; 
-      var newPath = path.join(__dirname, 'uploads') 
-              + '/'+files.profilePic.name 
-      var rawData = fs.readFileSync(oldPath) 
-    
-      fs.writeFile(newPath, rawData, function(err){ 
-          if(err) console.log(err) 
-          return res.send("Successfully uploaded") 
-      }) 
-}) 
-res.sendFile(__dirname + '/entertainment')
-}); 
-
 
 // Start our server so that it can begin listening to client requests.
 db.sequelize.sync({ force: true }).then(() => {
