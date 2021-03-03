@@ -74,12 +74,12 @@ SOFTWARE.
 
 ## Contributions
 
--Esiena Ekwofia, Alex Woolley, Domonique Christopher, and Caroline Lynch 
--Help from TA's 
--Help from Tutors 
+- Esiena Ekwofia, Alex Woolley, Domonique Christopher, and Caroline Lynch 
+- Help from TA's 
+- Help from Tutors 
 
 ## Screenshot of application
-![Stepping_Out]()
+![Stepping_Out](./public/assets/images/readme.png)
 
 
 ## Links:
